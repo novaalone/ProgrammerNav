@@ -38,7 +38,9 @@ import { URL_LIST, Hot } from '@/config';
     };
   },
 })
-export default class Home extends Vue {}
+export default class Home extends Vue {
+
+}
 </script>
 
 <style lang="less" scoped>
@@ -75,4 +77,5 @@ export default class Home extends Vue {}
 .each-card {
   margin: 16px 0;
 }
+
 </style>

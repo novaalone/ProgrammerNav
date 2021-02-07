@@ -8,7 +8,16 @@
         @select="handleSelect"
       )
         el-menu-item(index="Home") 首页
-      .page-title 程序员导航
+      .right-content
+        .search-content
+          el-input.searh-box(
+            placeholder="请输入搜索内容"
+            v-model="keyword"
+            size="large"
+            @keyup.enter.native="onSearch"
+          )
+            el-button(slot="append" icon="el-icon-search" @click="onSearch")
+        .page-title 程序员导航
     el-main
       <router-view/>
     el-footer
@@ -25,10 +34,16 @@ import { Component, Vue } from 'vue-property-decorator';
 export default class App extends Vue {
   private activeIndex = 'Home';
 
+  private keyword = '';
+
   private handleSelect(key: string) {
     this.$router.push({
       name: key,
     });
+  }
+
+  private onSearch() {
+    window.open(`https://www.baidu.com/s?word=${this.keyword}`);
   }
 }
 </script>
@@ -51,11 +66,13 @@ export default class App extends Vue {
   top: 0;
   left: 0;
   right: 0;
-  height: 50px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  z-index: 1;
 }
 
 .el-main {
-  padding-top: 80px;
+  padding: 80px 20px;
   min-height: 600px;
 }
 .el-footer {
@@ -86,5 +103,16 @@ export default class App extends Vue {
   font-size: 18px;
   color:#333;
   font-weight: 500;
+}
+
+.search-content {
+  width:300px;
+  margin-right: 50px;
+}
+
+.right-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 </style>

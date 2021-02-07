@@ -93,6 +93,10 @@ export const FrontEnd = [
     name: 'BootStrap',
     url: 'https://www.bootcss.com/',
   },
+  {
+    name: 'Npm',
+    url: 'https://www.npmjs.com/',
+  },
 ];
 
 export const Design = [
