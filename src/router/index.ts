@@ -10,7 +10,7 @@ const routes: Array<RouteConfig> = [
     name: 'Home',
     component: Home,
     meta: {
-      title: '首页',
+      title: '程序员导航',
     },
   },
   {
@@ -19,6 +19,14 @@ const routes: Array<RouteConfig> = [
     component: () => import('../views/Tool.vue'),
     meta: {
       title: '常用工具',
+    },
+  },
+  {
+    path: '/pay',
+    name: 'Pay',
+    component: () => import('../views/Pay.vue'),
+    meta: {
+      title: '友情赞助',
     },
   },
 ];

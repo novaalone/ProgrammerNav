@@ -12,11 +12,10 @@
     el-main
       <router-view/>
     el-footer
-      .bottom-info
-        el-link(:underline="false").link-text 反馈建议
-        el-link.link-text 友情赞助
-        el-link.link-text 官方合作
-        el-link.link-text 交个朋友
+        el-link(:underline="false" href="https://github.com/novaalone/ProgrammerNav/issues" target="_blank").link-text 反馈建议
+        el-link(:underline="false" href="/pay").link-text 友情赞助
+        el-link(:underline="false" href="mailto:novafighting@163.com").link-text 官方合作
+        el-link(:underline="false").link-text 交个朋友
 </template>
 
 <script lang="ts">
@@ -57,13 +56,16 @@ export default class App extends Vue {
 
 .el-main {
   padding-top: 80px;
+  min-height: 600px;
 }
 .el-footer {
   padding: 0;
-}
-.bottom-info {
-  background:  #3F4C5F;
+  position: fixed;
+  bottom: 0;
+  left:0;
+  right: 0;
   padding: 40px;
+  background:  #3F4C5F;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
