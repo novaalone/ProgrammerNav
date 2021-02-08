@@ -24,6 +24,7 @@
         el-link(:underline="false" href="https://github.com/novaalone/ProgrammerNav/issues" target="_blank").link-text 反馈建议
         el-link(:underline="false" href="#/pay").link-text 友情赞助
         el-link(:underline="false" href="mailto:novafighting@163.com").link-text 官方合作
+        el-link(:undeerline="false" href="https://tongji.baidu.com/").link-text 百度统计
 </template>
 
 <script lang="ts">
